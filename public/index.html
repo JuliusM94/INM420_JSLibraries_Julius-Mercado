@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets\css\style.css">
+    <link rel="stylesheet" type="text/css" href="assets\css\lightbox.css">
+    <link rel="stylesheet" href="assets\css\glide.core.min.css">
+    <link rel="stylesheet" href="assets\css\glide.theme.min.css">
+    <link href="path/to/lightbox.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="crossorigin=""></script>
     <title>Casify | Homepage</title>
 </head>
 <body>
     <header>
         <h1>CASIFY</h1>
+        
         <nav>
-            <ul>
+            <div class="menu-icon" id="menu-icon">
+                &#9776;
+            </div>
+            <ul id="nav-links">
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#products">PRODUCTS</a></li>
                 <li><a href="#about">ABOUT US</a></li>
@@ -18,12 +28,19 @@
             </ul>
         </nav>
     </header>
+    
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide"><img src="assets\images\banner-1.png" alt="Slide 1"></li>
+            <li class="glide__slide"><img src="assets\images\banner-2.png" alt="Slide 2"></li>
+            <li class="glide__slide"><img src="assets\images\banner-3.png" alt="Slide 3"></li>
+          </ul>
+        </div>
 
-    <div class="carousel" id="home">
-        <div class="slides">
-            <img src="assets\images\banner-1.png" alt="Slide 1">
-            <img src="assets\images\banner-2.png" alt="Slide 2">
-            <img src="assets\images\banner-3.png" alt="Slide 3">
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
         </div>
     </div>
 
@@ -31,79 +48,80 @@
     
     <section class="product-features" id="products">
         <div class="product">
-            <img src="assets\images\case-1.png" alt="Product 1">
+            <a href="assets\images\case-1.png" data-lightbox="product-1" data-title="GR Phone Case"><img src="assets\images\case-1.png" alt="GR Phone Case"></a>
             <h2>GR Phone Case</h2>
             <p>Enjoy a one-of-a-kind piece that celebrates your special connection with your furry friend.</p>
             <p class="case-price">$19.99</p>
             <button class="add-cart">ADD TO CART</button>
         </div>
         <div class="product">
-            <img src="assets\images\case-2.png" alt="Product 2">
+            <a href="assets\images\case-2.png" data-lightbox="product-2" data-title="Classic Spiderman Case"><img src="assets\images\case-2.png" alt="Classic Spiderman Case"></a>
             <h2>Classic Spiderman Case</h2>
             <p>The simple Spider-Man phone case design features a sleek, minimalist spider emblem on a bold red background.</p>
             <p class="case-price">$24.99</p>
             <button class="add-cart">ADD TO CART</button>
         </div>
         <div class="product">
-            <img src="assets\images\case-3.png" alt="Product 3">
+            <a href="assets\images\case-3.png" data-lightbox="product-3" data-title="Hogwarts Phone Case"><img src="assets\images\case-3.png" alt="Hogwarts Phone Case"></a>
             <h2>Hogwarts Phone Case</h2>
             <p>The Harry Potter phone case design showcases a stunning depiction of Hogwarts Castle under a starry night sky.</p>
             <p class="case-price">$14.99</p>
             <button class="add-cart">ADD TO CART</button>
         </div>
         <div class="product">
-            <img src="assets\images\case-4.png" alt="Product 4">
+            <a href="assets\images\case-4.png" data-lightbox="product-4" data-title="Rick and Morty Case"><img src="assets\images\case-4.png" alt="Rick and Morty Case"></a>
             <h2>Rick and Morty Case</h2>
             <p>The Rick and Morty phone case design features a vibrant illustration of the duo traveling through a psychedelic portal.</p>
             <p class="case-price">$29.99</p>
             <button class="add-cart">ADD TO CART</button>
         </div>
         <div class="product">
-            <img src="assets\images\case-5.png" alt="Product 5">
+            <a href="assets\images\case-5.png" data-lightbox="product-5" data-title="DC Batman Case"><img src="assets\images\case-5.png" alt="DC Batman Case"></a>
             <h2>DC Batman Case</h2>
             <p>The Batman phone case design prominently displays the iconic bat emblem in black against a sleek, matte grey background.</p>
             <p class="case-price">$34.99</p>
             <button class="add-cart">ADD TO CART</button>
         </div>
         <div class="product">
-            <img src="assets\images\case-6.png" alt="Product 6">
+            <a href="assets\images\case-6.png" data-lightbox="product-6" data-title="MOM: Loki Case"><img src="assets\images\case-6.png" alt="MOM: Loki Case"></a>
             <h2>MOM: Loki Case</h2>
             <p>The Loki phone case design features the mischievous god's signature green and gold color scheme, with his iconic horned helmet prominently displayed.</p>
             <p class="case-price">$39.99</p>
             <button class="add-cart">ADD TO CART</button>
         </div>
         <div class="product">
-            <img src="assets\images\case-7.png" alt="Product 7">
+            <a href="assets\images\case-7.png" data-lightbox="product-7" data-title="Spider Man: Miles Morales Case"><img src="assets\images\case-7.png" alt="Spider Man: Miles Morales Case"></a>
             <h2>SM: Miles Morales Case</h2>
             <p>The Miles Morales phone case design features his black and red Spider-Man suit set against a striking blue background, highlighting his iconic spider emblem.</p>
             <p class="case-price">$39.99</p>
             <button class="add-cart">ADD TO CART</button>
         </div>
         <div class="product">
-            <img src="assets\images\case-8.png" alt="Product 8">
+            <a href="assets\images\case-8.png" data-lightbox="product-8" data-title="F.R.I.E.N.D.S Case"><img src="assets\images\case-8.png" alt="F.R.I.E.N.D.S Case"></a>
             <h2>F.R.I.E.N.D.S Case</h2>
             <p>The F.R.I.E.N.D.S phone case design features iconic elements like the Central Perk logo and the show's title in a colorful, nostalgic design.</p>
             <p class="case-price">$39.99</p>
             <button class="add-cart">ADD TO CART</button>
         </div>
         <div class="product">
-            <img src="assets\images\case-9.png" alt="Product 9">
+            <a href="assets\images\case-9.png" data-lightbox="product-9" data-title="Garfield Case"><img src="assets\images\case-9.png" alt="Garfield Case"></a>
             <h2>Garfield Case</h2>
             <p>he Garfield phone case design features Garfield lazily lounging, showcasing his trademark nonchalant expression and relaxed demeanor.</p>
             <p class="case-price">$39.99</p>
             <button class="add-cart">ADD TO CART</button>
         </div>
         <div class="product">
-            <img src="assets\images\case-10.png" alt="Product 10">
+            <a href="assets\images\case-10.png" data-lightbox="product-10" data-title="Scooby-Doo Case"><img src="assets\images\case-10.png" alt="Scooby-Doo Case"></a>
             <h2>Scooby-Doo Case</h2>
             <p>The Mystery Machine phone case design captures the iconic van from Scooby-Doo, adorned with psychedelic colors and whimsical design.</p>
             <p class="case-price">$39.99</p>
             <button class="add-cart">ADD TO CART</button>
         </div>
+    </section>
 
-
-
-
+    <section id="map-area">
+        <h2>ENJOY FREE DELIVERY WITHIN OUR SERVICE ZONE</h2>
+        <div id="map"></div>
     </section>
 
     <footer>
@@ -111,5 +129,24 @@
     </footer>
 
     <script src="assets\javascript\script.js"></script>
+
+    <!-- glide.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="assets\javascript\lightbox-plus-jquery.js"></script>    
+
+    <script>
+        new Glide('.glide').mount()
+
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            var navLinks = document.getElementById('nav-links');
+            if (navLinks.classList.contains('show')) {
+                navLinks.classList.remove('show');
+            } else {
+                navLinks.classList.add('show');
+            }
+        });
+
+    </script>
+
 </body>
 </html>

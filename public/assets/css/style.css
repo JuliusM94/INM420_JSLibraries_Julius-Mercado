@@ -12,22 +12,28 @@ header {
     background-color: #333;
     color: white;
     text-align: center;
-    /* padding: 1em 0; */
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
 }
 
 header h1 {
-    margin: 20px 30px;
+    margin: 0;
     font-family: "Averia Serif Libre", serif;
     font-weight: 700;
     font-style: italic;
 }
 
 nav {
-    margin: 20px 30px;
-    /* background-color: #444; */
-    /* overflow: hidden; */
+    margin: 20px 0;
+    position: relative;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 /* nav ul {
@@ -55,7 +61,6 @@ nav ul li a {
     padding: 14px 5px;
     text-decoration: none;
     color: white;
-    /* text-align: center; */
     transition: background-color 0.3s, font-weight 0.3s;
 }
 
@@ -63,6 +68,7 @@ nav ul li a:hover {
     background-color: #555;
     font-weight: bold;
 }
+
 /* CAROUSEL */
 .carousel {
     width: 100%;
@@ -127,9 +133,88 @@ section {
     padding: 20px;
 }
 
+/* map */
+#map { 
+    height: 350px; 
+}
+
+#map-area {
+    margin: 20px 0;
+}
+
+#map-area h2 {
+    text-align: center;
+}
+
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1em 0;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 350px;
+        height: 700px;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #232222;
+        border-radius: 10px;
+        z-index: 99;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    nav ul li a {
+        padding: 14px 20px;
+    }
+
+    /* Carousel */
+    .glide {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .glide__slides {
+        display: flex;
+    }
+
+    .glide__slide img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Additional styles for carousel, products, and footer */
+    .carousel {
+        width: 100%;
+        overflow: hidden;
+        margin: 20px 0;
+    }
+
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+        width: 100%;
+        height: auto;
+    }
 }
