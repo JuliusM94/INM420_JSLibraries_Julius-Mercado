@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-image: linear-gradient(to bottom right, rgb(190, 35, 187), rgb(113, 25, 175));
     color: white;
     text-align: center;
     display: flex;
@@ -147,7 +147,7 @@ section {
 }
 
 footer {
-    background-color: #333;
+    background-image: linear-gradient(to bottom right, rgb(190, 35, 187), rgb(113, 25, 175));
     color: white;
     text-align: center;
     padding: 1em 0;
